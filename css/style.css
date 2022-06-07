@@ -359,8 +359,8 @@ margin-right: auto;
     background-color: rgba(33, 150, 243, 0.9);;
     opacity: 0;
 }
-.portfolio-card-visual:hover::before,
-.portfolio-card-visual:focus::before{
+.portfolio-link .portfolio-card-visual:hover::before
+.portfolio-link .portfolio-card-visual:focus::before{
     opacity: 1;
 }
 .portfolio-card{
