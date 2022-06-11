@@ -122,13 +122,17 @@ justify-content:space-between;
 .header-nav-link:focus {
     color: var(--accent-color);
 }
-.header-nav-link::after {
+.current{
+    position: relative;
+    color: var(--accent-color);
+}
+.current::after {
     content: '';
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
+    transform: translateY(30px);
     border-radius: 2px;
-
     display: block;
     width: 100%;
     height: 4px;
@@ -348,6 +352,7 @@ justify-content:space-between;
     border: none;
     border-radius: 4px;
     transition: color 250ms linear;
+    transition: box-shadow 250ms linear;
 
 
 }
@@ -394,6 +399,7 @@ justify-content:space-between;
         top: 0;
         left: 0;
         transition: box-shadow 250ms linear;
+
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -491,6 +497,30 @@ justify-content:space-between;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.about-us-visual{
+    position: relative;
+}
+.about-us-fon{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+.about-us-text{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        color: #FFFFFF;
+}
 
 /* =========About-us */
 /* ========Our-team========== */
@@ -566,14 +596,25 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     width: 44px;
     height: 44px;
     border-radius: 50% 50%;
-    fill: #afb1b8;
+    
     transition: background-color 250ms linear;
 }
 
 .social-link:hover,
 .social-link:focus {
-    fill: white;
     background-color: var(--accent-color);
+}
+.list-social-link{
+    fill: #afb1b8;
+    transition: fill 250ms linear;
+}
+.list-social-link:hover,
+.list-social-link:focus{
+ fill: var(--white-color);
+}
+.social-link:hover .list-social-link,
+.social-link:focus .list-social-link{
+    fill: var(--white-color);
 }
 
 
